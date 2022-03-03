@@ -6,17 +6,18 @@ import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 import Cryptocurrencies from './Cryptocurrencies'
+import News from './News';
 const { Title } = Typography;
 
 
 const Home = () => {
-    const { data, isFetching } = useGetCryptosQuery();
+    const { data, isFetching } = useGetCryptosQuery(100);
 
     if (isFetching) return <p>Loading ....</p>
 
     const globalStats = data?.data?.stats;
 
-    // console.log(globalStats);
+    console.log(globalStats);
     return (
         <>
             <Title level={2} className="heading">Global Crypto Stats</Title>
@@ -32,6 +33,7 @@ const Home = () => {
                 <Title level={3} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
             </div>
             <Cryptocurrencies simplified />
+            <News simplified />
         </>
     )
 }

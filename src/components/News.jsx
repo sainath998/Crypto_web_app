@@ -1,0 +1,32 @@
+import React, { useState } from 'react';
+import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
+import moment from 'moment';
+
+import { useGetCryptoNewsQuery } from '../services/cryptonewsApi';
+const { Title } = Typography;
+
+function News({ simplified }) {
+    const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: 'CryptoCurrency', count: simplified ? 6 : 12 });
+    console.log("data is  ");
+    console.log(cryptoNews);
+
+    if (!cryptoNews?.value) return 'Loading';
+    return (
+        <Row gutter={[24, 24]}>
+            {cryptoNews.value.map((news, i) => (
+                <Col xs={24} sm={12} lg={8} key={i}>
+                    <Card hoverable className="news-card">
+                        <a href={news.url} target="_blank" rel="noreferrer">
+                            <div className="news-image-container">
+                                <Title className='news-title' level={4}>{news.name}</Title>
+                                {/* <img src={news?.image?.thumbnail?.contentUrl || demoImage} alt="" /> */}
+                            </div>
+                        </a>
+                    </Card>
+                </Col>
+            ))}
+        </Row>
+    )
+}
+
+export default News

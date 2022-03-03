@@ -4,6 +4,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 
 import { Navbar, Home, Cryptocurrencies } from "./components/index";
+import News from "./components/News";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
               </Route>
               <Route exact path="/cryptocurrencies">
                 <Cryptocurrencies />
+              </Route>
+              <Route exact path="/news">
+                <News />
               </Route>
             </Switch>
           </div>
