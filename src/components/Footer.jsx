@@ -7,7 +7,7 @@ import './Footer.css'
 function Footer() {
     return (
         <footer>
-            <p class="text-center">Copyright &copy; Devpractical.com</p>
+            <p class="text-center">Copyright &copy; SainathReddy</p>
         </footer>
     )
 }
