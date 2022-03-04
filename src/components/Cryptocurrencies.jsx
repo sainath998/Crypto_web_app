@@ -25,7 +25,7 @@ function Cryptocurrencies({ simplified }) {
     return (
         <>
             {!simplified && <div style={{ "paddingLeft": "25%" }} className='search-crypto'>
-                <Input style={{ "width": "50%", "paddingLeft": "15%", "color": "orange" }} placeholder='Search Crypto' onChange={(e) => setSearchTerm(e.target.value)} />
+                <Input style={{ "width": "50%", "paddingLeft": "21%", "color": "orange", "backgroundColor": "#040C18", "borderRadius": "20%", "marginTop": "20px", "marginBottom": "20px" }} placeholder='Search Crypto' onChange={(e) => setSearchTerm(e.target.value)} />
             </div>}
             {/* <div style={{ "paddingLeft": "25%" }} className='search-crypto'>
                 <Input style={{ "width": "50%", "paddingLeft": "15%" }} placeholder='search crypto' onChange={(e) => setSearchTerm(e.target.value)} />

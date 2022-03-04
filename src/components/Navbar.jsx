@@ -30,12 +30,12 @@ const Navbar = () => {
     return (
         <div className="nav-container">
             <div className="logo-container">
-                <Avatar src={icon} size="large" />
-                <Typography.Title level={2} className="logo"><Link to="/">Cryptoverse</Link></Typography.Title>
+                <Avatar style={{ "background": "tomato  ", width: "100px", height: "100px", marginLeft: "45%" }} src={icon} size="large" />
+                <Typography.Title style={{ marginLeft: "42%" }} level={2} className="logo"><Link to="/">Crypto World</Link></Typography.Title>
                 {!activeMenu && (<Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>)}
             </div>
             {activeMenu && (
-                <Menu theme="dark">
+                <Menu theme="dark" mode='horizontal' style={{ "width": "40%", "marginLeft": "25%", "paddingLeft": "10%" }}>
                     <Menu.Item icon={<HomeOutlined />}>
                         <Link to="/">Home</Link>
                     </Menu.Item>

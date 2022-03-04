@@ -24,6 +24,7 @@ function News({ simplified }) {
             {!simplified && (
                 <Col span={24}>
                     <Select
+                        style={{ "marginLeft": "40%", "paddingTop": "20px" }}
                         showSearch
                         className="select-news"
                         placeholder="Select a Crypto"

@@ -7,6 +7,7 @@ import { Navbar, Home, Cryptocurrencies } from "./components/index";
 import News from "./components/News";
 import CryptoDetails from "./components/CryptoDetails";
 import Exchanges from "./components/Exchanges";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           </div>
         </Layout>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -28,16 +28,20 @@ const Home = () => {
                 <Col span={12}><Statistic title="Total 24h Volume" value={globalStats.total24hVolume} /></Col>
                 <Col span={12}><Statistic title="Total Markets" value={globalStats.totalMarkets} /></Col>
             </Row>
+            <hr />
             <div className="home-heading-container">
-                <Title level={2} className="home-title">Top 10 Cryptos In The World</Title>
+                <Title style={{ "color": "orange", "textDecoration": "underline", "marginTop": "20px", "marginLeft": "30%" }} level={2} className="home-title">Top 10 Cryptos In The World</Title>
+                <Cryptocurrencies simplified />
                 <Title level={3} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
             </div>
-            <Cryptocurrencies simplified />
+            <hr />
             <div className="home-heading-container">
-                <Title level={2} className="home-title">Top 10 Cryptos News of the World</Title>
+                <Title style={{ "color": "orange", "textDecoration": "underline", "marginTop": "20px", "marginLeft": "30%" }} level={2} className="home-title">Top 6 Cryptos News of the World</Title>
+                <News simplified />
                 <Title level={3} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
             </div>
-            <News simplified />
+
+
         </>
     )
 }
