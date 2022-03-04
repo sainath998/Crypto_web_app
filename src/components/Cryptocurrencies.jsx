@@ -21,21 +21,22 @@ function Cryptocurrencies({ simplified }) {
     }, [cryptosList, searchTerm]);
 
 
+
     return (
         <>
             {!simplified && <div style={{ "paddingLeft": "25%" }} className='search-crypto'>
-                <Input style={{ "width": "50%", "paddingLeft": "15%" }} placeholder='search crypto' onChange={(e) => setSearchTerm(e.target.value)} />
+                <Input style={{ "width": "50%", "paddingLeft": "15%", "color": "orange" }} placeholder='Search Crypto' onChange={(e) => setSearchTerm(e.target.value)} />
             </div>}
             {/* <div style={{ "paddingLeft": "25%" }} className='search-crypto'>
                 <Input style={{ "width": "50%", "paddingLeft": "15%" }} placeholder='search crypto' onChange={(e) => setSearchTerm(e.target.value)} />
             </div> */}
 
-            <h2>curr1</h2>
             <Row gutter={[32, 32]} className="crypto-card-container">
-                {cryptos?.map((currency) => (
-                    <Col key={currency.marketCap} xs={24} sm={12} lg={6} className="crypto-card" key={currency.id}>
-                        <Link to={`/crypto/${currency.id}`}>
+                {cryptos?.map((currency, i) => (
+                    <Col key={currency.marketCap} xs={24} sm={12} lg={6} className="crypto-card" >
+                        <Link to={`/crypto/${currency.uuid}`}>
                             <Card
+                                bordered
                                 title={`${currency.rank}. ${currency.name}`}
                                 extra={<img width="100px" hight="100px" className="crypto-image" src={currency.iconUrl} hoverable />}>
                                 <p>Price : {millify(currency.price)}</p>

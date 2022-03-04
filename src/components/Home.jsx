@@ -16,8 +16,8 @@ const Home = () => {
     if (isFetching) return <p>Loading ....</p>
 
     const globalStats = data?.data?.stats;
-
     console.log(globalStats);
+    if (!globalStats) return "Loading";
     return (
         <>
             <Title level={2} className="heading">Global Crypto Stats</Title>

@@ -6,6 +6,7 @@ import { Layout, Typography, Space } from "antd";
 import { Navbar, Home, Cryptocurrencies } from "./components/index";
 import News from "./components/News";
 import CryptoDetails from "./components/CryptoDetails";
+import Exchanges from "./components/Exchanges";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
               </Route>
               <Route exact path="/crypto/:coinId">
                 <CryptoDetails />
+              </Route>
+              <Route exact path="/exchanges">
+                <Exchanges />
               </Route>
             </Switch>
           </div>
